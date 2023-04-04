@@ -24,7 +24,7 @@ $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(OBJ_FILES)
 	gcc -c $< -o $@
 # los antecedentes se leen de izquierda a derecha, primero necesito la carpeta obj_dir para luego compilar los archos c y guardarlos dentro	
 #-c (compilar) $< (nombre del archivo original), -o (donde lo voy a dejar)												
-all: $(OBJ_FILES) $(BIN_FILES)
+all: $(OBJ_FILES) $(BIN_DIR)
 #gcc -o $(BIN_DIR)/app.elf $(OBJ_FILES)
 	echo $(SRC_FILES)
 	echo $(OBJ_FILES)  
