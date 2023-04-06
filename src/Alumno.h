@@ -58,7 +58,7 @@ typedef struct alumno_s{
 
 /* === Public function declarations ============================================================ */
 
-int Serializar(const alumno_t * alumno, char cadena[], uint32_t espacio);
+int Serializar(const struct alumno_s * alumno, char cadena[], uint32_t espacio);
 /*alumno es un puntero a el tipo de dato alumno_t*/
 /*de esta manera paso la direccion de inicio de la estructura y no la estructura entera porque la estructura es grande para andar copiandola*/
 /*la marco como const para indicar que no cambio el contenido de la estructura solo la leo*/

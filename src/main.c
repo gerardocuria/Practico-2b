@@ -30,6 +30,7 @@ SPDX-License-Identifier: MIT
 /* === Headers files inclusions =============================================================== */
 
 #include "Alumno.h"
+#include <stdio.h>
 
 /* === Macros definitions ====================================================================== */
 
@@ -42,9 +43,42 @@ SPDX-License-Identifier: MIT
 /* === Public variable definitions ============================================================= */
 
 int main(void){
-    struct alumno_s yo; /*defino yo como estructura alumno_s*/
-    strncpy(yo.apellido, "Curia", sizeof(yo.apellido));
-    /*yo.apellido = "Curia";*/
+
+    static const struct alumno_s yo = {
+        .apellido = "Curia",
+        .nombre = "Gerardo",
+        .documento = 41495098,
+     };
+     /*defino yo como estructura alumno_s*/
+
+    /*strncpy(yo.apellido, "Curia", sizeof(yo.apellido)); esto ya no sirve*/
+    /*Esta funcion hace yo.apellido = "Curia";*/
+
+    /*Las variables locales se asignan en la pila, la variable existe mientras se llama a la subrrutina*/
+    /*Si pongo const la variable sigue estando en la pila, lo unico que va a hacer es que no se pueda escribir*/
+    /*Si pongo datos en la pila hasta pisar las variables globales, estas cambina de valor*/
+    /*La pila se divide en global, head, pila*//*head es un area de memoria dinamica que cambia durante la ejecucion del programa*/
+    /*Las variables en HEAD se crean y se destruyen en tiempo de ejecucion, no de compilacion como las variables globales*/
+    /*malloc para pedir un bloque de memoria en head y free para devolverlo*/
+    /*En sistemas embebidos no es recomendable usar HEAD, porque nos podemos quedar sin memoria, en general solo usamos variables globales y la pila*/
+    /*Si a las variables la defino dentro de una funcion son locales y se guaran en la pila, si las defino fuera de cualquier funcion es global*/
+    /*Para crear una variable global el compilador genera en flah un bloque con todos los valores iniciales de la variable y antes de ejecutar el main copia ese sector de flah en la ram(global)*/
+    /*Si defino una variable local y no le pongo valor, este valor es descocnocido*/
+    /*Si defino una variable local sin valor, este valor es 0*/
+    /*En ejecucion querer guardar una variable en flahs es una locura*/
+    /*Finalmente si quiero poner la variable yo (que esta dentro de una funcion por lo que es local) con la flash, debo poner satic (para definirla como global) y const (se le asigna lugar en la flash, pero no en la ram ya que se la puede trabajar de la flash directamente ya que es constante)*/
+
+
+    char cadena[128];
+
+    if (Serializar(&yo, cadena, sizeof(cadena)) >= 0){
+    /*Serializar(direccion de memoria de yo, direccion de memoria de cadena, tamaño de la cadena (si o si sizeof porque el tamaño solo se da en tiempo de ejecucion));*/
+        printf ("%s\n", cadena);
+    }else{
+        printf("Error al serializar\n");
+    };
+
+
     return 0;
 }
 
