@@ -70,17 +70,17 @@ int Serializar(const struct alumno_s * alumno, char cadena[], uint32_t espacio){
     cadena[0] = '{';
     cadena++;
     disponibles--;
-    resultado = SerializarCadena("apellido",alumno->apellido, disponibles);
+    resultado = SerializarCadena("apellido",&alumno->apellido,cadena,disponibles);
 
     if (resultado > 0){
-        disponibles -= reaultado;
+        disponibles -= resultado;
         cadena += resultado;
-        resultado = SerializarCadena("nombre",alumno->nombre,disponibles);
+        resultado = SerializarCadena("nombre",&alumno->nombre,cadena,disponibles);
     }
     if (resultado > 0){
-        disponibles -= reaultado;
+        disponibles -= resultado;
         cadena += resultado;
-        resultado = SerializarNumero("documento",alumno->documento,disponibles);
+        resultado = SerializarNumero("documento",alumno->documento,cadena,disponibles);
     }
     if (resultado > 0){
         cadena += resultado;

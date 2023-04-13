@@ -21,16 +21,16 @@ $(BIN_DIR) : $(OUT_DIR)
 	mkdir $(BIN_DIR)
 		
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(OBJ_FILES)
-	gcc -c $< -o $@
+	gcc -c $< -o $@ -I src
 # los antecedentes se leen de izquierda a derecha, primero necesito la carpeta obj_dir para luego compilar los archos c y guardarlos dentro	
 #-c (compilar) $< (nombre del archivo original), -o (donde lo voy a dejar)												
 all: $(OBJ_FILES) $(BIN_DIR)
-#gcc -o $(BIN_DIR)/app.elf $(OBJ_FILES)
-	echo $(SRC_FILES)
-	echo $(OBJ_FILES)  
-	echo $(BIN_FILES) 
-# echo sirve para ver el contenido de la variable mientras se debaguea el makefile
-# Falta comlpletar 
+	gcc -o $(BIN_DIR)/app.elf $(OBJ_FILES)
+#echo $(SRC_FILES)
+#echo $(OBJ_FILES)  
+#echo $(BIN_FILES) 
+#echo sirve para ver el contenido de la variable mientras se debaguea el makefile
+#Falta comlpletar 
 
 clean: $(OUT_DIR)
 	rm -r $(OUT_DIR)
