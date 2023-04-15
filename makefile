@@ -5,7 +5,7 @@ OUT_DIR =./build
 OBJ_DIR = $(OUT_DIR)/obj
 #Guardo los archivo objeto en build/obj
 BIN_DIR = $(OUT_DIR)/bin
-#Guardo los archivo binarion en build/bin
+#Guardo los archivo binario en build/bin
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 #SRC_FILES tiene la lista de archivos c que hay que compilar que estan en SRC_DIR
 OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))

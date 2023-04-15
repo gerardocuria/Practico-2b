@@ -72,7 +72,7 @@ int main(void){
     char cadena[128];
 
     if (Serializar(&yo, cadena, sizeof(cadena)) >= 0){
-    /*Serializar(direccion de memoria de yo, direccion de memoria de cadena, tamaño de la cadena (si o si sizeof porque el tamaño solo se da en tiempo de ejecucion));*/
+    /*Serializar(direccion de memoria de yo, direccion de memoria de cadena (donde guardo la cadena en formato json), tamaño de la cadena (si o si sizeof porque el tamaño solo se da en tiempo de ejecucion));*/
         printf ("%s\n", cadena);
     }else{
         printf("Error al serializar\n");
