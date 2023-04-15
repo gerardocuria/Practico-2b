@@ -34,3 +34,6 @@ all: $(OBJ_FILES) $(BIN_DIR)
 
 clean: $(OUT_DIR)
 	rm -r $(OUT_DIR)
+
+doc:
+	doxygen Doxyfile
