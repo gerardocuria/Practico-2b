@@ -22,14 +22,11 @@ SPDX-License-Identifier: MIT
 #ifndef Alumno_H
 #define Alumno_H
 
-/** \brief Brief description of the file
+/** @brief 
  **
- ** Full file description
- **
- ** \addtogroup name Module denomination
- ** \brief Brief description of the module
  ** @{ */
-
+/**
+*/
 /* === Headers files inclusions ================================================================ */
 
 /* === Cabecera C++ ============================================================================ */
@@ -46,10 +43,13 @@ extern "C" {
 /*el compilador gcc sabe donde esta stdint.h*/
 
 /* === Public data type declarations =========================================================== */
+/** @brief 
+Estructura que contiene el espacio para guardar apellido, nombre y documento del alumno
+*/
 typedef struct alumno_s{
-    char apellido[50];
-    char nombre[50];
-    uint32_t documento;
+    char apellido[50];//!< 50 bytes para apellido
+    char nombre[50];//!< 50 bytes para nombre
+    uint32_t documento;//!<  32bits para documento
 } alumno_t;
 /*la estructura se llama alumno_s y con typedef la defini como un tipo de dato llamado alumno_t*/
 
@@ -57,6 +57,11 @@ typedef struct alumno_s{
 /* === Public variable declarations ============================================================ */
 
 /* === Public function declarations ============================================================ */
+
+/** @brief 
+(direccion de inicio de la estructura alumno_t, cadena con los datos del alumno en formato json, el espacio ocupado por la cadena)
+esta funcion toma los datos del alumno, luego completa una cadena con los datos del alumno en formato json.
+*/
 
 int Serializar(const struct alumno_s * alumno, char cadena[], uint32_t espacio);
 /*alumno es un puntero a el tipo de dato alumno_t*/

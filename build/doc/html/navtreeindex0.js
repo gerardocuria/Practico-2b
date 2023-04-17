@@ -1,8 +1,11 @@
 var NAVTREEINDEX0 =
 {
 "_alumno_8c.html":[3,0,0,0],
+"_alumno_8c.html#a42623ad65fa302f37ab5ac69b5ac3e89":[3,0,0,0,0],
 "_alumno_8c_source.html":[3,0,0,0],
 "_alumno_8h.html":[3,0,0,1],
+"_alumno_8h.html#a42623ad65fa302f37ab5ac69b5ac3e89":[3,0,0,1,2],
+"_alumno_8h.html#a7d837f4c799d82980a5685c76addac19":[3,0,0,1,1],
 "_alumno_8h_source.html":[3,0,0,1],
 "annotated.html":[2,0],
 "classes.html":[2,1],
@@ -14,17 +17,15 @@ var NAVTREEINDEX0 =
 "globals_func.html":[3,1,1],
 "globals_type.html":[3,1,2],
 "group__name.html":[1,0],
-"group__name.html#ga42623ad65fa302f37ab5ac69b5ac3e89":[1,0,3],
-"group__name.html#ga7d837f4c799d82980a5685c76addac19":[1,0,1],
-"group__name.html#ga840291bc02cba5474a4cb46a9b9566fe":[1,0,2],
+"group__name.html#ga840291bc02cba5474a4cb46a9b9566fe":[1,0,0],
 "index.html":[],
 "main_8c.html":[3,0,0,2],
 "main_8c_source.html":[3,0,0,2],
 "md_readme.html":[0],
 "modules.html":[1],
 "pages.html":[],
-"structalumno__s.html":[1,0,0],
-"structalumno__s.html#a1ef101187895b8f57e3f67ca5bb63f62":[1,0,0,1],
-"structalumno__s.html#a4fe6b5102a899fac0404985b6344c0b2":[1,0,0,0],
-"structalumno__s.html#af26ce4b42bb69654a5ba7dff3456d5e4":[1,0,0,2]
+"structalumno__s.html":[2,0,0],
+"structalumno__s.html#a1ef101187895b8f57e3f67ca5bb63f62":[2,0,0,1],
+"structalumno__s.html#a4fe6b5102a899fac0404985b6344c0b2":[2,0,0,0],
+"structalumno__s.html#af26ce4b42bb69654a5ba7dff3456d5e4":[2,0,0,2]
 };

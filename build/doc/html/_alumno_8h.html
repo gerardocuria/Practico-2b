@@ -91,9 +91,7 @@ $(document).ready(function(){initNavTree('_alumno_8h.html',''); initResizable();
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Data Structures</a>  </div>
   <div class="headertitle"><div class="title">Alumno.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -105,18 +103,71 @@ $(document).ready(function(){initNavTree('_alumno_8h.html',''); initResizable();
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structalumno__s.html">alumno_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura que contiene el espacio para guardar apellido, nombre y documento del alumno.  <a href="structalumno__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ga7d837f4c799d82980a5685c76addac19"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structalumno__s.html">alumno_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__name.html#ga7d837f4c799d82980a5685c76addac19">alumno_t</a></td></tr>
-<tr class="separator:ga7d837f4c799d82980a5685c76addac19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga42623ad65fa302f37ab5ac69b5ac3e89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__name.html#ga42623ad65fa302f37ab5ac69b5ac3e89">Serializar</a> (const struct <a class="el" href="structalumno__s.html">alumno_s</a> *alumno, char cadena[], uint32_t espacio)</td></tr>
-<tr class="separator:ga42623ad65fa302f37ab5ac69b5ac3e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d837f4c799d82980a5685c76addac19"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structalumno__s.html">alumno_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_alumno_8h.html#a7d837f4c799d82980a5685c76addac19">alumno_t</a></td></tr>
+<tr class="memdesc:a7d837f4c799d82980a5685c76addac19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura que contiene el espacio para guardar apellido, nombre y documento del alumno.  <br /></td></tr>
+<tr class="separator:a7d837f4c799d82980a5685c76addac19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42623ad65fa302f37ab5ac69b5ac3e89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_alumno_8h.html#a42623ad65fa302f37ab5ac69b5ac3e89">Serializar</a> (const struct <a class="el" href="structalumno__s.html">alumno_s</a> *alumno, char cadena[], uint32_t espacio)</td></tr>
+<tr class="memdesc:a42623ad65fa302f37ab5ac69b5ac3e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">(direccion de inicio de la estructura alumno_t, cadena con los datos del alumno en formato json, el espacio ocupado por la cadena) esta funcion toma los datos del alumno, luego completa una cadena con los datos del alumno en formato json.  <br /></td></tr>
+<tr class="separator:a42623ad65fa302f37ab5ac69b5ac3e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a7d837f4c799d82980a5685c76addac19" name="a7d837f4c799d82980a5685c76addac19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d837f4c799d82980a5685c76addac19">&#9670;&#160;</a></span>alumno_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structalumno__s.html">alumno_s</a> <a class="el" href="_alumno_8h.html#a7d837f4c799d82980a5685c76addac19">alumno_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estructura que contiene el espacio para guardar apellido, nombre y documento del alumno. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a42623ad65fa302f37ab5ac69b5ac3e89" name="a42623ad65fa302f37ab5ac69b5ac3e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42623ad65fa302f37ab5ac69b5ac3e89">&#9670;&#160;</a></span>Serializar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Serializar </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structalumno__s.html">alumno_s</a> *&#160;</td>
+          <td class="paramname"><em>alumno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>cadena</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>espacio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(direccion de inicio de la estructura alumno_t, cadena con los datos del alumno en formato json, el espacio ocupado por la cadena) esta funcion toma los datos del alumno, luego completa una cadena con los datos del alumno en formato json. </p>
+
+<p class="definition">Definition at line <a class="el" href="_alumno_8c_source.html#l00069">69</a> of file <a class="el" href="_alumno_8c_source.html">Alumno.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

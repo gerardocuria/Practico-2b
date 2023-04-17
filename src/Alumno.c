@@ -20,12 +20,8 @@ SPDX-License-Identifier: MIT
 *************************************************************************************************/
 
 
- /** \brief Brief description of the file
+ /** \brief 
  **
- ** Full file description
- **
- ** \addtogroup name Module denomination
- ** \brief Brief description of the module
  ** @{ */
 
 /* === Headers files inclusions =============================================================== */
@@ -52,10 +48,16 @@ static int SerializarNumero();
 
 /* === Private function implementation ========================================================= */
 
+/** @brief 
+muestra en formato json y devuelve la cantidad de espacio usado
+*/
 
 static int SerializarCadena(const char * campo,const char * valor, char * cadena, int espacio){
     return snprintf(cadena, espacio, "\"%s\":\"%s\",", campo, valor);
 }
+/** @brief 
+muestra en formato json y devuelve la cantidad de espacio usado
+*/
 static int SerializarNumero(const char * campo, int valor, char * cadena, int espacio){
     return snprintf(cadena, espacio, "\"%s\":\"%d\",", campo, valor);
 }
