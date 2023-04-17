@@ -19,7 +19,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 SPDX-License-Identifier: MIT
 *************************************************************************************************/
 
-/** \brief Brief description of the file
+
+ /** \brief Brief description of the file
  **
  ** Full file description
  **

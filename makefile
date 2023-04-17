@@ -11,15 +11,15 @@ SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
 #OBJ:FILES tiene la lista de archivos o que voy a generar a partir de cada archivo c
 
-$(OUT_DIR):  
-	mkdir $(OUT_DIR)                        
+$(OUT_DIR):
+	mkdir $(OUT_DIR)
 
 $(OBJ_DIR) : $(OUT_DIR)
 	mkdir $(OBJ_DIR)
 
 $(BIN_DIR) : $(OUT_DIR)
 	mkdir $(BIN_DIR)
-		
+	
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(OBJ_FILES)
 	gcc -c $< -o $@ -I src
 # los antecedentes se leen de izquierda a derecha, primero necesito la carpeta obj_dir para luego compilar los archos c y guardarlos dentro	
